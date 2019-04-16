@@ -1,0 +1,21 @@
+
+.container{
+    width: 100vw;
+    margin:auto;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.circle{
+    width:150px;
+    height: 150px;
+    background-color: #FFB463;
+    border-radius: 100px;
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
