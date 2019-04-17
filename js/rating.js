@@ -2,10 +2,10 @@
 window.addEventListener('load', function () {
 
     function cambiarColor(variable) {
-        variable.style.background = '#1C9996';
+        variable.style.background = '#FFA208';
     };
     function recuperarColor(variable){
-        variable.style.background = '#FFB463';
+        variable.style.background = '#25A681';
     }
 
     /*var icono = document.querySelectorAll('.far');
@@ -13,28 +13,42 @@ window.addEventListener('load', function () {
         icono[i].classList.remove('fa-frown');
         icono[i].classList.add('fa-grin');
     }*/
-    
+    function elementName(event){
+        alert(event.target.nodeName);
+    }
+    var body=document.querySelector('body');
+
+    body.addEventListener('click', function(){
+        elementName(event);
+    });
 
     var elemento = document.querySelectorAll('.circle');
 
-   //funciona pero da un error???
-   /* for (var i in elemento) {
-        var seleccionado= elemento[i];
-        seleccionado.addEventListener('mouseover', function() {
-            cambiarColor(this);
-        });
-    }*/
+   for(let selec=0 ; selec<elemento.length; selec++) {
 
-
-    elemento.forEach(function(valor){
-        valor.addEventListener('mouseover', function(){
+    //Ejercicio 1- al estar encima cambia el color y al salir recupera el color
+      /* elemento[selec].addEventListener('mouseover', function(){
             cambiarColor(this);
-        });
-        valor.addEventListener('mouseout',function(){
+       });
+      
+      elemento[selec].addEventListener('mouseout', function(){
             recuperarColor(this);
-        })
-    });
+       });*/
+     
+       
+    //al premer s'han de quedar fixe amb les anteriors
+        elemento[selec].addEventListener('click',function(){
+            while(selec>=0){
+                cambiarColor(elemento[selec]);
+                selec--;
+               
+            }
+        });
+
+    };
+        
 
 
+  
 
 }); //fin load
