@@ -9,7 +9,7 @@
     flex-wrap: wrap;
 }
 
-.circle{
+.circle{ 
     width:200px;
     height: 200px;
     background-color: #25A681;
@@ -18,4 +18,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+.circle:before{
+    font-family: 'Font Awesome 5 Free';
+    content:"\f556";
+}
+.happy{
+    background-color:#FFA208;
+}
+
+.happy:before{
+    font-family: 'Font Awesome 5 Free';
+    content:"\f580";
 }
