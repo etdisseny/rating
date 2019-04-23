@@ -29,12 +29,12 @@ window.addEventListener('load', function () {
     for(let selec = 0; selec < elemento.length; selec++){
 
      
-        /* elemento[selec].addEventListener('mouseover', function(){
+         /* elemento[selec].addEventListener('mouseover', function(){
             cambiarIcono(this);
 
         });
 
-        elemento[selec].addEventListener('mouseout', function(){
+      elemento[selec].addEventListener('mouseout', function(){
             recuperarIcono(this);
         }); */
            
@@ -55,12 +55,20 @@ window.addEventListener('load', function () {
                 } 
                 
                 for(let i = 0; i<=selec; i++){
+                   
                     cambiarColor(elemento[i]);  
                 }
                  
             });
 
-        //al clicar fuera recuperamos el estilo inicial
+        //
+
+
+            
+           
+   };
+
+//foral clicar fuera recuperamos el estilo inicial
             body.addEventListener('click', function(event){
                 var elementName= event.target.className; //recupero el className del elemento al que hago clic
             
@@ -69,12 +77,6 @@ window.addEventListener('load', function () {
                 } 
 
             });
-
-
-            
-           
-   };//for
-
                     
 
   
